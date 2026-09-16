@@ -24,17 +24,37 @@ function App() {
   console.log("🚀 ~ App ~ isComplete:", isComplete);
   console.log("🚀 ~ App ~ todo:", todoName);
 
+  const handleButtonClick = (data) => {
+    console.log("cllick!!!", data);
+  };
+
   // view_문법(html)
   return (
     <div className="App">
       Hello World!
       <Greeting />
-      <Greeting />
       {/**미션 : Card 컴포넌트 만들고, 이자리에서 호출 */}
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card
+        imgUrl={
+          "https://cf.product-image.s.zigzag.kr/original/d/2026/8/24/2833_202608241452280370_67109.jpeg?width=720&height=720&quality=80&format=webp"
+        }
+        itemName={"111"}
+        onButtonClick={handleButtonClick}
+      />
+      <Card
+        imgUrl={
+          "https://cf.product-image.s.zigzag.kr/original/d/2026/9/8/2833_202609081141205996_45671.jpeg?width=720&height=720&quality=80&format=webp"
+        }
+        itemName={"222"}
+        onButtonClick={handleButtonClick}
+      />
+      <Card
+        imgUrl={
+          "https://cf.product-image.s.zigzag.kr/original/d/2026/9/15/11864_202609150926561139_52417.jpeg?width=720&height=720&quality=80&format=webp"
+        }
+        itemName={"333"}
+        onButtonClick={handleButtonClick}
+      />
     </div>
   );
 }
